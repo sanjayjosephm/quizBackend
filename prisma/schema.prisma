@@ -1,0 +1,24 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+    // uncomment next line if you use Prisma <5.10
+    // directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+// model Question {
+//   id       Int      @default(autoincrement())
+//   question_id  String @id @unique @default(cuid())
+//   question     String
+//   answer   String
+// }
+
+model QuestionTwo {
+    id          Int    @default(autoincrement())
+    question_id String @id @unique @default(cuid())
+    question    String
+    answer      String
+}
