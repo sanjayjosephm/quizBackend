@@ -7,7 +7,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 var corsOptions = {
-  origin: ["http://localhost:3000",'https://quiz-app-gamma-ashen.vercel.app/'],
+  origin: ["http://localhost:3000",'https://quiz-app-gamma-ashen.vercel.app'],
   optionsSuccessStatus: 200,
 
 }
