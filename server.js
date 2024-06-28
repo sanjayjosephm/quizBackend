@@ -6,9 +6,14 @@ const { PrismaClient } = require("@prisma/client");
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors({
-  origin: 'https://quiz-kqv4ny875-sanjay-josephs-projects.vercel.app'
-}));
+var corsOptions = {
+  origin: ["http://localhost:3000",'https://quiz-kqv4ny875-sanjay-josephs-projects.vercel.app'],
+  optionsSuccessStatus: 200,
+
+}
+
+app.use(cors(corsOptions))
+
 app.use(express.json());
 
 app.get("/app", (req, res) => {
