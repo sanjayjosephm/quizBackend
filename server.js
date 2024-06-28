@@ -7,7 +7,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(cors({
-  origin: 'https://quiz-kqv4ny875-sanjay-josephs-projects.vercel.app'
+  origin: 'http://quiz-kqv4ny875-sanjay-josephs-projects.vercel.app'
 }));
 app.use(express.json());
 
