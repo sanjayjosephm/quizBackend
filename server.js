@@ -1,13 +1,12 @@
 const express = require("express");
 const cors = require("cors")
-
+const { PrismaClient } = require("@prisma/client");
 
 // Instance of HTTP Server
 const app = express();
-app.use(cors())
-
-const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
+
+app.use(cors())
 app.use(express.json());
 
 app.get("/app", (req, res) => {
